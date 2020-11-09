@@ -1,0 +1,17 @@
+{
+  "name": "markdown-image-relocate",
+  "version": "1.0.0",
+  "description": "Relocate images in Markdown files",
+  "main": "markdown-image-relocate-cli.js",
+  "bin": {
+    "markdown-image-relocate": "markdown-image-relocate-cli.js"
+  },
+  "author": "Tomas Fernandez <contact@tomfern.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bent": "^7.3.12",
+    "mktemp": "^1.0.0",
+    "sha1-file": "^2.0.0",
+    "yargs": "^16.1.0"
+  }
+}
