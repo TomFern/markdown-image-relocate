@@ -46,7 +46,7 @@ async function downloadUrls(urls, folder) {
         let fn = mktemp.createFileSync(path.join(folder, 'XXXXXXXX' + fext));
         fs.writeFileSync(fn, buffer);
 
-        // check if exists in folder
+        // check if image exists in folder
         fsum = sha1File.sync(fn);
         const found = checksums.find( f => f.checksum == fsum );
         if(typeof(found) !== 'undefined') {            
@@ -55,7 +55,7 @@ async function downloadUrls(urls, folder) {
         }
         else {
             let new_name = path.basename(url);
-            fs.renameSync(fn, new_name);
+            fs.renameSync(fn, path.join(folder, new_name));
             fn = new_name;             
         }
 
